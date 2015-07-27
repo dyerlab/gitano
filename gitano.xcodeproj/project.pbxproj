@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AAD34AD1B66C6DD000FE404 /* libgsl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAD34AB1B66C6DD000FE404 /* libgsl.a */; };
+		2AAD34AE1B66C6DD000FE404 /* libgslcblas.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AAD34AC1B66C6DD000FE404 /* libgslcblas.a */; };
 		2AB69C191B66C5E40030C4A5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB69C181B66C5E40030C4A5 /* main.swift */; };
+		2AB69C251B66C5FA0030C4A5 /* globalz.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AB69C201B66C5FA0030C4A5 /* globalz.c */; };
+		2AB69C261B66C5FA0030C4A5 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AB69C221B66C5FA0030C4A5 /* main.c */; };
+		2AB69C271B66C5FA0030C4A5 /* matrix_ops.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AB69C231B66C5FA0030C4A5 /* matrix_ops.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +28,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2AAD34AB1B66C6DD000FE404 /* libgsl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgsl.a; path = ../../../../usr/local/lib/libgsl.a; sourceTree = "<group>"; };
+		2AAD34AC1B66C6DD000FE404 /* libgslcblas.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgslcblas.a; path = ../../../../usr/local/lib/libgslcblas.a; sourceTree = "<group>"; };
 		2AB69C151B66C5E40030C4A5 /* gitano */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gitano; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB69C181B66C5E40030C4A5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2AB69C1F1B66C5F90030C4A5 /* gitano-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gitano-Bridging-Header.h"; sourceTree = "<group>"; };
+		2AB69C201B66C5FA0030C4A5 /* globalz.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = globalz.c; sourceTree = "<group>"; };
+		2AB69C211B66C5FA0030C4A5 /* globalz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = globalz.h; sourceTree = "<group>"; };
+		2AB69C221B66C5FA0030C4A5 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		2AB69C231B66C5FA0030C4A5 /* matrix_ops.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = matrix_ops.c; sourceTree = "<group>"; };
+		2AB69C241B66C5FA0030C4A5 /* matrix_ops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix_ops.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAD34AD1B66C6DD000FE404 /* libgsl.a in Frameworks */,
+				2AAD34AE1B66C6DD000FE404 /* libgslcblas.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +56,8 @@
 		2AB69C0C1B66C5E40030C4A5 = {
 			isa = PBXGroup;
 			children = (
+				2AAD34AB1B66C6DD000FE404 /* libgsl.a */,
+				2AAD34AC1B66C6DD000FE404 /* libgslcblas.a */,
 				2AB69C171B66C5E40030C4A5 /* gitano */,
 				2AB69C161B66C5E40030C4A5 /* Products */,
 			);
@@ -57,7 +74,13 @@
 		2AB69C171B66C5E40030C4A5 /* gitano */ = {
 			isa = PBXGroup;
 			children = (
+				2AB69C201B66C5FA0030C4A5 /* globalz.c */,
+				2AB69C211B66C5FA0030C4A5 /* globalz.h */,
+				2AB69C221B66C5FA0030C4A5 /* main.c */,
+				2AB69C231B66C5FA0030C4A5 /* matrix_ops.c */,
+				2AB69C241B66C5FA0030C4A5 /* matrix_ops.h */,
 				2AB69C181B66C5E40030C4A5 /* main.swift */,
+				2AB69C1F1B66C5F90030C4A5 /* gitano-Bridging-Header.h */,
 			);
 			path = gitano;
 			sourceTree = "<group>";
@@ -88,6 +111,7 @@
 		2AB69C0D1B66C5E40030C4A5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Rodney Dyer";
 				TargetAttributes = {
@@ -119,6 +143,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AB69C191B66C5E40030C4A5 /* main.swift in Sources */,
+				2AB69C251B66C5FA0030C4A5 /* globalz.c in Sources */,
+				2AB69C261B66C5FA0030C4A5 /* main.c in Sources */,
+				2AB69C271B66C5FA0030C4A5 /* matrix_ops.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,14 +233,21 @@
 		2AB69C1D1B66C5E40030C4A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "gitano/gitano-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2AB69C1E1B66C5E40030C4A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "gitano/gitano-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -236,6 +270,7 @@
 				2AB69C1E1B66C5E40030C4A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
